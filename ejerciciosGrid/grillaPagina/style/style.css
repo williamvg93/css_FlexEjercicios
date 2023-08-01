@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+body {
+    min-width: 100vh;
+    min-height: 100vh;
+    border: 1px solid yellow;
+}
+
+main, header, aside, section, footer {
+    border: 2px solid brown;
+    padding: 5px;
+}
+
+/* Grid AREA */
+
+main{
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: 10% repeat(1fr) 10%;
+    grid-template-areas: "hea hea hea hea hea"
+    "asi sect sect sect sect"
+    "asi sect sect sect sect"
+    "asi sect sect sect sect"
+    "asi sect sect sect sect"
+    "foo foo foo foo foo";
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    grid-area: hea;
+    
+}
+
+aside {
+    grid-area: asi;
+}
+
+section {
+    grid-area: sect;
+}
+
+footer {
+    grid-area: foo;
+}
+
+
+/* Grid Colum - Row */
+
+/* main{
+    display: grid;
+    grid-template-columns: 15% 1fr 15%;
+    grid-template-rows: 15% 1fr 15%;
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+aside {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+section {
+    grid-column: 2/-1;
+    grid-row: 2/3;
+}
+
+footer {
+    grid-column: 1/-1;
+    grid-row: 3/-1;
+} */
